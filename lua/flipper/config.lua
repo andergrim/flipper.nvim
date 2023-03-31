@@ -7,6 +7,13 @@ local Flipper = {}
 Flipper.options = {
     -- Prints useful logs about what event are triggered, and reasons actions are executed.
     debug = false,
+    flippers = {
+        {"true",    "false"},
+        {"yes",     "no"},
+        {"on",      "off"},
+        {"enabled", "disabled"},
+        {"enable",  "disable"},
+    }
 }
 
 --- Define your flipper setup.

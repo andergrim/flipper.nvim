@@ -6,5 +6,5 @@ end
 _G.FlipperLoaded = true
 
 vim.api.nvim_create_user_command("Flipper", function()
-    require("flipper").toggle()
+    require("flipper").flip()
 end, {})

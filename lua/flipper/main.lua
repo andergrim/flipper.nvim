@@ -3,47 +3,9 @@ local D = require("flipper.util.debug")
 -- internal methods
 local Flipper = {}
 
--- state
-local S = {
-    -- Boolean determining if the plugin is enabled or not.
-    enabled = false,
-}
-
----Toggle the plugin by calling the `enable`/`disable` methods respectively.
 ---@private
-function Flipper.toggle()
-    if S.enabled then
-        return Flipper.disable()
-    end
-
-    return Flipper.enable()
-end
-
----Initializes the plugin.
----@private
-function Flipper.enable()
-    if S.enabled then
-        return S
-    end
-
-    S.enabled = true
-
-    return S
-end
-
----Disables the plugin and reset the internal state.
----@private
-function Flipper.disable()
-    if not S.enabled then
-        return S
-    end
-
-    -- reset the state
-    S = {
-        enabled = false,
-    }
-
-    return S
+function Flipper.flip()
+    print('Hello world')
 end
 
 return Flipper
